@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Delish Bites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    nav {
+      background-color:#ff6f61;;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #ff6f61;;
+      color: white;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      padding: 20px 10px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+      font-style: italic;
+    }
+
+    .contact-section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .contact-info, .contact-form {
+      margin-bottom: 30px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6em;
+      color: #c0392b;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .contact-form button {
+      background-color: #c0392b;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #a93226;
+    }
+ .reservation-box, .social-highlight {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 1em;
+  }
+
+  .contact-info h2,
+  .contact-form h2,
+  .reservation-box h2,
+  .social-highlight h2 {
+    font-size: 1.4em;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1em;
+  }
+
+  .reservation-box,
+  .social-highlight {
+    padding: 15px;
+  }
+}
+footer {
+      text-align: center;
+      padding: 15px;
+      background-color:#ff6f61;;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌟 NAVIGATION BAR -->
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about us.html">About Us</a>
+    <a href="contact us.html">Contact</a>
+  </nav>
+
+  <!-- 🌟 HEADER -->
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you!</p>
+  </header>
+
+  <!-- 🌟 CONTACT SECTION -->
+  <div class="contact-section">
+
+    <!-- 📞 CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong> +92-300-1234567</p>
+      <p><strong>Email:</strong> info@delishbites.pk</p>
+      <p><strong>Address:</strong> Main Boulevard, Hyderabad, Sindh</p>
+      <p><strong>Opening Hours:</strong> Mon–Sat: 12pm – 11pm</p>
+      <p><strong>Follow Us:</strong> 
+        <a href="#" style="color:#c0392b;">Facebook</a> | 
+        <a href="#" style="color:#c0392b;">Instagram</a> | 
+        <a href="#" style="color:#c0392b;">WhatsApp</a>
+      </p>
+    </div>
+
+    <!-- 📝 CONTACT FORM -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+<div class="reservation-box">
+  <h2>Ready to Dine With Us?</h2>
+  <p>Call us at <strong>+92-300-1234567</strong> to reserve your table today!</p>
+  <p>Or drop by anytime during our opening hours.</p>
+</div>
+<div class="social-highlight">
+  <h2>Follow Us on Instagram</h2>
+  <p>See our latest dishes, events, and behind-the-scenes moments.</p>
+  <a href="#" style="color:#c0392b;">@delishbites.pk</a>
+</div>
+
+
+  </div>
+
+  <!-- 🌟 FOOTER -->
+  <footer>
+    <p>&copy; 2025 Delish Bites.All rights reserved. 

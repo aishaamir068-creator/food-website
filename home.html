@@ -1,0 +1,454 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayesha's Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500&family=Playfair+Display&family=Raleway:wght@600&family=Fredoka:wght@600&display=swap" rel="stylesheet">
+</head> 
+<body>  
+<header>
+  <div class="navbar">
+    <div class="logo">🍽️ Delish Bites</div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="contact us.html">Contact</a></li>
+      <!-- 🛒 Cart Icon in Navbar -->
+<li class="nav-item">
+  <a class="nav-link position-relative" href="#" onclick="toggleCartPanel()">
+    🛒 Cart
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
+    </span>
+  </a>
+</li>  
+</ul>
+<!-- 🧾 Cart Side Panel -->
+<div id="cart-panel">
+  <div class="cart-header">
+    <h4>Your Cart</h4>
+    <button onclick="toggleCartPanel()" class="close-btn">&times;</button>
+  </div>
+  <ul id="cart-items" class="cart-list"></ul>
+  <p><strong>Total:</strong> Rs. <span id="cart-total">0</span></p>
+  <button id="checkout-btn" class="btn btn-danger w-100">Checkout</button>
+</div>
+<div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+    </nav>
+  </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+<section class="hero">
+    <h1>Cook with Passion,<br> Serve with Love</h1>
+  </section>
+  <br>
+<br>  
+<section class="menu-section">
+  <h2>Starters 🍕 </h2>
+  <div class="focal-container">
+    <div class="focal-box" data-price="250">
+      <img src="images (2).jpg" alt="Garlic Bread">
+      <h3>Garlic Bread</h3>
+      <p>Toasted perfection with herbs & butter.</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+
+</div>
+    </div>
+    <div class="focal-box"data-price="400">
+      <img src="1552947-lg.webp" alt="Cheesy Nachos">
+      <h3>Cheesy Nachos</h3>
+      <p>Loaded with cheese, jalapeños & salsa.</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div>
+    </div>
+    <div class="focal-box"data-price="500">
+      <img src="IMG-20241105-WA0009.jpg.webp" alt="Dynamite Chicken">
+      <h3>Dynamite Chicken</h3>
+      <p>Spicy bites with creamy dynamite sauce.</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div>
+    </div>
+    <div class="focal-box"data-price="400">
+      <img src="istockphoto-486940812-612x612.jpg" alt="Veg Rolls">
+      <h3>Veg Rolls</h3>
+      <p>Crispy rolls packed with fresh veggies.</p>
+       <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Main Course 🍝 </h2>
+  <div class="focal-container">
+    <div class="focal-box"data-price="850"><img src="chicken-caprese-pasta-2-656x875.jpg.jpg" alt="Grilled Chicken Pasta"><h3>Grilled Chicken Pasta</h3><p>Smoky grilled chicken with creamy pasta.</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div>
+</div>
+    <div class="focal-box"data-price="250"><img src="chicken-pulao-delicious-rice-cooked-600nw-2525970575.webp" alt="Spicy Chicken Pulao"><h3>Spicy Chicken Pulao</h3><p>Fragrant rice with bold chicken spices.</p>
+    <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="300"><img src="images (3).jpg" alt="Spicy Beef Pulao"><h3>Spicy Beef Pulao</h3><p>Rich beef flavor in aromatic rice.</p>
+     <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="400"><img src="images (4).jpg" alt="Shapata Roll Paratha"><h3>Shapata Roll Paratha</h3><p>Stuffed paratha rolls with spicy fillings.</p>   
+     <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="400"><img src="images (5).jpg" alt="Charsi Tikka"><h3>Charsi Tikka</h3><p>Chargrilled meat with traditional spices.</p>  
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div>></div>
+    <div class="focal-box"data-price="700"><img src="Lasagne-al-Pesto.jpg" alt="Lasagne-al-Pesto"><h3>Lasagne-al-Pesto</h3><p>Layered pasta with creamy pesto sauce.</p>
+        <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="450"><img src="images (6).jpg" alt="Chicken Gola Kebabs"><h3>Chicken Gola Kebabs</h3><p>Classic and juicy with green chutney.</p>
+       <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="780"><img src="Panner-Tikka-Masala-hyderabad-biryani-house.webp" alt="Paneer Tikka Masala"><h3>Paneer Tikka Masala</h3><p>Grilled paneer in spicy masala gravy.</p>
+        <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+  </div>
+</section>
+<section class="menu-section">
+  <h2>Desserts 🍰 </h2>
+  <div class="focal-container">
+    <div class="focal-box"data-price="350"><img src="images (7).jpg" alt="Choclate Lava Cake"><h3>Choclate Lava Cake</h3><p>Moist and Delecious.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="400"><img src="images (8).jpg" alt="Pineapple Cheesecake"><h3>Pineapple Cheesecake</h3><p>Flavorful and Fresh.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box" data-price="250"><img src="Triple-Chocolate-Brownies.jpg" alt="Fudge Brownie"><h3>Fudge Brownie</h3><p>Fudgee and Chewee.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="400"><img src="images (9).jpg" alt="Strawberry Cheesecake"><h3>Strawberry Cheesecake</h3><p>Flavorful and Fresh.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+  </div>
+</section>
+<section class="menu-section">
+  <h2>Beverages 🥤 </h2>
+  <div class="focal-container">
+    <div class="focal-box"data-price="180"><img src="MintLemonade-1200x1200-1.jpg" alt="Mint Lemonade"><h3>Mint Lemonade</h3><p>Golden, chilled, and bursting with orchard-fresh flavor.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="220"><img src="Caramel-Iced-Coffee-6.jpg" alt="Iced Coffee"><h3>Iced Coffee</h3><p>Freshly brewed coffee with bold flavor and smooth finish. </p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="120"><img src="images (10).jpg" alt="Fresh Apple Juice"><h3>Fresh Apple Juice</h3><p>Golden, chilled, and bursting with orchard-fresh flavor.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="220"><img src="Flat_White_480x480.webp" alt="Hot Coffee"><h3>Hot Coffee</h3><p>Freshly brewed coffee with bold flavor and smooth finish.</p><div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Combo Deals  🎉</h2>
+  <div class="focal-container">
+    <div class="focal-box"data-price="2200"><img src="images (13).jpg" alt="Combo Deal"><h3>Deal No: 01</h3><p>2 Medium Pizzas + Garlic Bread + 1 Jumbo Drinks</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="500"><img src="chicken-pulao-recipe-7.webp" alt="Combo Deal"><h3>Deal No: 02</h3><p>Chicken Pulao + raita and salad</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="800"><img src="delicious-chicken-alfredo-pasta-dish-garlic-bread-white-plate-creamy-chicken-alfredo-pasta-served-grilled-chicken-372424125.webp" alt="Combo Deal"><h3>Deal No: 03</h3><p>Alfredo Pasta + Garlic Bread + 1 Mint Lemonade</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="800"><img src="images (14).jpg" alt="BBQ Deal"><h3>Deal No: 04</h3><p>2 Charsi Tikka + 1 Jumbo Drinks</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="1200"><img src="chelo-kebab-chalo-kabab-or-cheelo-with-mandi-biryani-rice-served-in-dish-isolated-on-table-top-view-of-arabic-food-photo.jpg" alt="Combo Deal"><h3>Deal No: 05</h3><p>Steam Rice + Chicken Gola Kebabs + Chutney</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+    <div class="focal-box"data-price="1000"><img src="images (15).jpg" alt="Combo Deal"><h3>Deal No: 06</h3><p>Loaded Fries with Dynamite Chicken</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+   <div class="focal-box"data-price="700"><img src="Lasagne-al-Pesto.jpg" alt="Combo Deal"><h3>Deal No: 07</h3><p>large Lasagne-al-Pesto + Jumbo Drink</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+   <div class="focal-box"data-price="800"><img src="images (4).jpg" alt="Combo Deal"><h3>Deal No: 08</h3><p>Shapata Roll Paratha + Green Chutney</p>
+      <div class="quantity-selector">
+  <button class="qty-btn" onclick="decreaseQty(this)">−</button>
+  <input type="text" value="0" class="qty-input" readonly>
+  <button class="qty-btn" onclick="increaseQty(this)">+</button>
+</div></div>
+  </div>
+</section>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Chef’s Specials 👨‍🍳 🍽️</h2>
+  <div class="row justify-content-center">
+    <!-- Card 1 -->
+    <div class="col-md-4 mb-4">
+    <div class="flip-card" data-name="Crown Pizza" data-price="1200">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="1675382453.jpg" class="img-fluid" alt="Pizza">
+            <h4 class="mt-2">Crown Pizza</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Loaded with cheese, pepperoni, olives, and a golden crust.</p>
+            <p><strong>Rs. 1200</strong></p>
+              <button class="btn btn-warning">Add to Cart</button></div>
+          </div>
+        </div>
+      </div>
+       <!-- Card 2 -->
+    <div class="col-md-4 mb-4">
+     <div class="flip-card" data-name="Taiyaki Croissant" data-price="1000">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images (11).jpg" class="img-fluid" alt="Pizza">
+            <h4 class="mt-2">Taiyaki Croissant</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Fish-shaped pastry filled with Nutella, cream cheese, or savory fillings</p>
+            <p><strong>Rs. 1000</strong></p>
+            <button class="btn btn-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Card 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="flip-card" data-name="Korean BBQ Tacos" data-price="1500">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="korean-beef-tacos-00947df5.avif" class="img-fluid" alt="Pizza">
+            <h4 class="mt-2">Korean BBQ Tacos</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Bulgogi beef, kimchi slaw, and sesame aioli in soft tortillas.</p>
+            <p><strong>Rs. 1500</strong></p>
+              <button class="btn btn-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Card 4 -->
+    <div class="col-md-4 mb-4">
+      <div class="flip-card"data-name="Portobello Mushrooms" data-price="1200">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images (12).jpg" class="img-fluid" alt="Pizza">
+            <h4 class="mt-2">Portobello Mushrooms</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Filled with herbed ricotta, spinach, and sun-dried tomatoes.</p>
+            <p><strong>Rs. 1200</strong></p>
+              <button class="btn btn-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Card 5 -->
+    <div class="col-md-4 mb-4">
+      <div class="flip-card" data-name="Avocado Toast Trio" data-price="800">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="k8uw36x32o1b1.jpg" class="img-fluid" alt="Pizza">
+            <h4 class="mt-2">Avocado Toast Trio</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Mediterranean styles with microgreens and poached eggs.</p>
+            <p><strong>Rs. 800</strong></p>
+              <button class="btn btn-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+  </div>
+</div>
+
+</div>
+</div>
+<br>
+<br>
+  <footer>
+    <p>&copy; 2025 Delish Bites. All rights reserved.</p>
+  </footer>  
+<script>
+  let cart = [];
+  let total = 0;
+
+  function toggleCartPanel() {
+    document.getElementById('cart-panel').classList.toggle('open');
+  }
+
+  function increaseQty(btn) {
+    const input = btn.parentElement.querySelector('.qty-input');
+    let value = parseInt(input.value) + 1;
+    input.value = value;
+    updateItem(btn, value);
+  }
+
+  function decreaseQty(btn) {
+    const input = btn.parentElement.querySelector('.qty-input');
+    let value = parseInt(input.value);
+    if (value > 1) {
+      value -= 1;
+      input.value = value;
+      updateItem(btn, value);
+    }
+  }
+
+  function updateItem(btn, quantity) {
+    const box = btn.closest('.focal-box');
+    const name = box.querySelector('h3').textContent;
+    const price = parseInt(box.getAttribute('data-price'));
+
+    if (isNaN(price)) {
+      alert(`Price missing for ${name}`);
+      return;
+    }
+
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity = quantity;
+    } else {
+      cart.push({ name, price, quantity });
+    }
+
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const cartCount = document.getElementById('cart-count');
+    cartItems.innerHTML = '';
+    total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      const itemTotal = item.price * item.quantity;
+      li.textContent = `${item.quantity} x ${item.name} - Rs. ${itemTotal}`;
+      cartItems.appendChild(li);
+      total += itemTotal;
+    });
+
+    cartTotal.textContent = total;
+    cartCount.textContent = cart.length;
+  }
+
+  document.getElementById('checkout-btn').addEventListener('click', () => {
+    alert('Thank you! Your order has been placed.');
+    cart = [];
+    total = 0;
+    updateCart();
+    toggleCartPanel();
+  });
+    // Add to Cart logic for flip cards
+  document.querySelectorAll('.flip-card .btn-warning').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.flip-card');
+      const name = card.getAttribute('data-name');
+      const price = parseInt(card.getAttribute('data-price'));
+
+      if (!name || isNaN(price)) {
+        alert('Missing item details!');
+        return;
+      }
+
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      updateCart();
+    });
+  });
+  
+
+ 
+</script>
+</body>
+</html>

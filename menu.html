@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish Bites | Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    /* 🌟 NAVIGATION BAR */
+    nav {
+      background-color: #ff6f61;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffe6e0;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0 10px;
+      font-size: 1.1em;
+      font-style: italic;
+    }
+
+    .menu-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .category h2 {
+      border-bottom: 4px solid #ff6f61;
+      padding-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+    }
+
+    .item-name {
+      font-weight: bold;
+    }
+
+    .item-price {
+      color: #ff6f61;
+    }
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .category h2 {
+    font-size: 1.5em;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-name,
+  .item-price {
+    flex: 1 1 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 1em;
+  }
+}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff6f61;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌟 NAVIGATION BAR -->
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about us.html">About Us</a>
+    <a href="contact us.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Delish Bites</h1>
+    <p>Fresh • Flavorful • Fantastic</p>
+  </header>
+
+  <div class="menu-section">
+    <div class="category">
+      <h2>Starters 🍕 </h2>
+      <div class="item">
+        <span class="item-name">Garlic Bread</span>
+        <span class="item-price">Rs. 250</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Cheesy Nachos</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Dynamite Chicken</span>
+        <span class="item-price">Rs. 500</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Veg Rolls</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2>Main Course 🍝</h2>
+      <div class="item">
+        <span class="item-name">Grilled Chicken Pasta</span>
+        <span class="item-price">Rs. 850</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Spicy Chicken Pulao</span>
+        <span class="item-price">Rs. 250</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Spicy Beef Pulao</span>
+        <span class="item-price">Rs. 300</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Shapata Roll Paratha</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Charsi Tikka</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Lasagne-al-Pesto</span>
+        <span class="item-price">Rs. 700</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Alfredo Pasta</span>
+        <span class="item-price">Rs. 450</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Paneer Tikka Masala</span>
+        <span class="item-price">Rs. 780</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2>Desserts 🍰 </h2>
+       <div class="item">
+        <span class="item-name">Choclate Lava Cake</span>
+        <span class="item-price">Rs. 350</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Pineapple Cheesecake</span>
+        <span class="item-price">Rs. 400</span>
+      </div> <div class="item">
+        <span class="item-name">Fudge Brownie</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Strawberry Cheesecake</span>
+        <span class="item-price">Rs. 400</span>
+      </div>
+
+    </div>
+
+    <div class="category">
+      <h2>Beverages 🥤 </h2>
+      <div class="item">
+        <span class="item-name">Mint Lemonade</span>
+        <span class="item-price">Rs. 180</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Iced Coffee</span>
+        <span class="item-price">Rs. 220</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Fresh Apple Juice</span>
+        <span class="item-price">Rs. 120</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Hot Coffee</span>
+        <span class="item-price">Rs. 220</span>
+      </div>
+    </div>
+    <div class="category">
+      <h2>Combo Deals 🛍️ 🎉 </h2>
+      <div class="item">
+        <span class="item-name"> Deal No: 01 <br> 2 Medium Pizzas + Garlic Bread + 1 Jumbo Drinks</span>
+        <span class="item-price">Rs. 2200</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Deal No: 02 <br> Chicken Pulao + raita and salad</span>
+        <span class="item-price">Rs. 500</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Deal No: 03 <br> Alfredo Pasta + Garlic Bread + 1 Mint Lemonade</span>
+        <span class="item-price">Rs. 800</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Deal No: 04 <br> 2 Charsi Tikka + 1 Jumbo Drinks</span>
+        <span class="item-price">Rs. 800</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Deal No: 05 <br> Steam Rice + Chicken Gola Kebabs + Chutney</span>
+        <span class="item-price">Rs. 1200</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Deal No: 06 <br> Loaded Fries with Dynamite Chicken</span>
+        <span class="item-price">Rs. 1000</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Deal No: 07 <br>large Lasagne-al-Pesto + Jumbo Drink</span>
+        <span class="item-price">Rs. 700</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Deal No: 08 <br>Shapata Roll Paratha + Green Chutney </span>
+        <span class="item-price">Rs. 800</span>
+      </div>
+    </div>
+
+  <div class="category">
+      <h2>Chef’s Special Menu 🍽️ </h2>
+      <div class="item">
+        <span class="item-name">Crown Pizza</span>
+        <span class="item-price">Rs. 1200</span>
+      </div>
+      <div class="item">
+        <span class="item-name">Taiyaki Croissant</span>
+        <span class="item-price">Rs. 1000</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Korean BBQ Tacos</span>
+        <span class="item-price">Rs. 1500</span>
+      </div>
+        <div class="item">
+        <span class="item-name">Portobello Mushrooms</span>
+        <span class="item-price">Rs. 1200</span>
+      </div>
+       <div class="item">
+        <span class="item-name">Avocado Toast Trio</span>
+        <span class="item-price">Rs. 800</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Delish Bites. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

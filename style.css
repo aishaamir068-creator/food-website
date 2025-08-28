@@ -1,0 +1,374 @@
+  body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef6e4;
+  color: #2f2f2f;
+}
+header {
+  background: linear-gradient(to right, #ff6f61, #ff9f1c);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ff6f61, #ffd166);
+  padding: 20px 40px;
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8em;
+   font-family: 'Fredoka', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #ff6f61;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+.hero {
+    height: 600px;
+  background-image: url(Lasagne-al-Pesto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 20px;
+text-align: center;
+  color: white;
+  font-size: 96px;
+  font-weight: bold;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+}
+h1{
+    padding-top: 3%;
+    font-size: 240px;
+      font-family: 'Fredoka', sans-serif;
+   
+   
+}
+  .menu-section {
+  padding: 50px 20px;
+  background-color:  #fef6e4;
+  text-align: center;
+}
+.menu-section h2 {
+  font-size: 2rem;
+  color: #e67e22;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 2px solid #e67e22;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.focal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.focal-box {
+  background-color:white;
+  border: 2px solid #e67e22;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.focal-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #e67e22;
+}
+
+.focal-box h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.focal-box p {
+  font-size: 0.95rem;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+}
+
+.focal-box:hover {
+  /* background-color: #e67e22; */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.focal-box:hover h3,
+.focal-box:hover p {
+  color: black;
+}
+
+.focal-box:hover img {
+  border-color: #fff;
+}
+@media (max-width: 768px) {
+  .hero {
+    font-size: 48px;
+    padding: 60px 20px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .focal-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* 🧾 Cart Panel */
+#cart-panel {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background-color: #fffaf5;
+  border-left: 2px solid #ff6f61;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1050;
+}
+
+#cart-panel.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15fpx;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+.cart-list {
+  color: #c0392b;
+  list-style: none;
+padding: 0;
+  margin-bottom: 10px;
+}
+
+.cart-list li {
+  font-size: 0.95em;
+  margin-bottom: 6px;
+}
+
+/* 🛒 Badge */
+#cart-count {
+  font-size: 0.75em;
+  padding: 4px 6px;
+}
+strong{
+  color: #c0392b;
+}
+
+/* 📱 Responsive Hide */
+@media (max-width: 768px) {
+  #cart-panel {
+    width: 100%;
+  }
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left:18px;
+  margin-bottom: 10px;
+}
+
+.qty-btn {
+  background-color:  #ff6f61;
+  color: white;
+  border: none;
+  padding: 6px 19px;
+  font-size: 20px;
+  border-radius: 5px;
+ cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.qty-btn:hover {
+  background-color: #e67e22;
+}
+
+.qty-input {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.focal-box{
+  margin-left: 80px;
+}
+/* Container and heading styling */
+.container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Flip card base */
+.flip-card {
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+/* Inner container for flipping */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Front face */
+.flip-card-front {
+  background-color: #fff;
+    border: 2px solid #e67e22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Back face */
+.flip-card-back {
+  background-color: #f8f9fa;
+    border: 2px solid #e67e22;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Image styling */
+.flip-card-front img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text styling */
+.flip-card-front h4 {
+  margin-top: 10px;
+  font-size:2rem;
+  color: #444;
+}
+
+.flip-card-back p {
+  margin: 10px 0;
+  font-size: 2rem;
+  color: #555;
+}
+
+/* Button styling */
+.flip-card-back .btn {
+  margin-top: 10px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+footer {
+  background-color:#ff6f61;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+.carousel-item{
+    height: 400px;
+  
+}
